@@ -1,0 +1,161 @@
+:root {
+  --ff-primary: 'Red Hat Display', sans-serif;
+
+  font-size: 62.5%;
+  --fs-body: 1.6rem;
+  --fs-title: 2.2rem;
+  --fs-footer: 1.1rem;
+
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-900: 900;
+  /* primary */
+  --clr-pale-blue: hsl(225, 100%, 94%);
+  --clr-bright-blue: hsl(245, 75%, 52%);
+  --clr-white: white;
+  /* neutral */
+  --crl-very-pale-blue: hsl(225, 100%, 98%);
+  --crl-desaturared-blue: hsl(224, 23%, 55%);
+  --crl-dark-blue: hsl(223, 47%, 23%);
+  --clr-blue: hsl(228, 45%, 44%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-pale-blue);
+  background-image: url("images/pattern-background-mobile.svg");
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-500);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main {
+  max-width: 32.7rem;
+  background-color: var(--clr-white);
+  border-radius: 2rem;
+}
+
+section {
+  padding: 3.3rem 2.4rem;
+  text-align: center;
+}
+
+aside {
+  margin-block: 2.5rem;
+  background-color: var(--crl-very-pale-blue);
+  border-radius: 1rem;
+  padding: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: var(--fs-title);
+  font-weight: var(--fw-900);
+  color: var(--crl-dark-blue);
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: var(--fw-900);
+  color: var(--crl-dark-blue);
+}
+
+p {
+  color: var(--crl-desaturared-blue);
+  line-height: 1.5;
+}
+/* buttons */
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-family: var(--ff-primary);
+  font-size: 1.4rem;
+  font-weight: var(--fw-700);
+  color:var(--clr-bright-blue);
+  text-decoration: underline;
+}
+
+button:hover,
+button:focus,
+.primary-btn:hover,
+.primary-btn:focus {
+  opacity: .75;
+  text-decoration: none;
+  transition: 300ms ease;
+}
+
+.primary-btn {
+  display: block;
+  text-decoration: none;
+  background-color:var(--clr-bright-blue);
+  color: var(--clr-white);
+  font-weight: var(--fw-700);
+  border-radius: 1rem;
+  padding-block: 1.6rem;
+  margin-bottom: 2.4rem;
+  box-shadow: 0 1rem 1.6rem rgba(0, 0, 0, 0.200);
+}
+
+.second-btn {
+  text-decoration: none;
+  color: var(--crl-desaturared-blue);
+  font-weight: var(--fw-900);
+}
+
+.second-btn:hover,
+.second-btn:focus {
+  color: var(--crl-dark-blue);
+}
+
+.hero-img {
+  display: block;
+  max-width: 100%;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.description {
+  padding-inline: .8rem;
+}
+
+.plan-info {
+  margin-right: 2.4rem;
+}
+
+.plan-info p {
+  font-size: 1.5rem;
+}
+
+.attribution { 
+  font-size: var(--fs-footer);
+  text-align: center;
+}
+
+.attribution a { 
+  display: inline;
+  color: var(--clr-blue);
+  text-decoration: none;
+}
+
+
+@media (min-width: 720px) {
+  body {
+    background-image: url("images/pattern-background-desktop.svg");
+  }
+}
