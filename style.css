@@ -2,8 +2,9 @@
   --ff-primary: 'Red Hat Display', sans-serif;
 
   font-size: 62.5%;
-  --fs-body: 1.6rem;
-  --fs-title: 2.2rem;
+  --fs-body-m: 1.5rem;
+  --fs-title-m: 2.2rem;
+  --fs-plan-m: 1.4rem
   --fs-footer: 1.1rem;
 
   --fw-500: 500;
@@ -27,135 +28,132 @@
 }
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--clr-pale-blue);
   background-image: url("images/pattern-background-mobile.svg");
-  background-size: contain;
-  background-position: top;
   background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  
+  height: 100vh;
+
   font-family: var(--ff-primary);
-  font-size: var(--fs-body);
+  font-size: var(--fs-body-m);
   font-weight: var(--fw-500);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  color: var(--crl-dark-blue);
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: var(--ff-primary);
+  display: inline-block;
+  text-align: center;
 }
 
 main {
   max-width: 32.7rem;
-  background-color: var(--clr-white);
-  border-radius: 2rem;
+  text-align: center;
+}
+
+.hero {
+  max-width: 100%;
+  display: block;
+  border-radius: 2rem 2rem 0 0 ;
 }
 
 section {
-  padding: 3.3rem 2.4rem;
-  text-align: center;
-}
+  background-color: var(--clr-white);
+  border-radius: 0 0 2rem 2rem;
 
-aside {
-  margin-block: 2.5rem;
-  background-color: var(--crl-very-pale-blue);
-  border-radius: 1rem;
-  padding: 1.6rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 3.2rem 2.4rem;
+  box-shadow: 0rem 1rem 1.5rem rgba(0, 0, 0, 0.137);
 }
 
 h1 {
-  font-size: var(--fs-title);
+  font-size: var(--fs-title-m);
   font-weight: var(--fw-900);
-  color: var(--crl-dark-blue);
-  margin-bottom: 2rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-  font-weight: var(--fw-900);
-  color: var(--crl-dark-blue);
-}
-
-p {
-  color: var(--crl-desaturared-blue);
-  line-height: 1.5;
-}
-/* buttons */
-button {
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-  font-family: var(--ff-primary);
-  font-size: 1.4rem;
-  font-weight: var(--fw-700);
-  color:var(--clr-bright-blue);
-  text-decoration: underline;
-}
-
-button:hover,
-button:focus,
-.primary-btn:hover,
-.primary-btn:focus {
-  opacity: .75;
-  text-decoration: none;
-  transition: 300ms ease;
-}
-
-.primary-btn {
-  display: block;
-  text-decoration: none;
-  background-color:var(--clr-bright-blue);
-  color: var(--clr-white);
-  font-weight: var(--fw-700);
-  border-radius: 1rem;
-  padding-block: 1.6rem;
-  margin-bottom: 2.4rem;
-  box-shadow: 0 1rem 1.6rem rgba(0, 0, 0, 0.200);
-}
-
-.second-btn {
-  text-decoration: none;
-  color: var(--crl-desaturared-blue);
-  font-weight: var(--fw-900);
-}
-
-.second-btn:hover,
-.second-btn:focus {
-  color: var(--crl-dark-blue);
-}
-
-.hero-img {
-  display: block;
-  max-width: 100%;
-  border-radius: 2rem 2rem 0 0;
+  margin-bottom: 1.6rem;
 }
 
 .description {
-  padding-inline: .8rem;
+  color: var(--crl-desaturared-blue);
+  padding-inline: .7em; /* ou 1.6rem */
+  line-height: 2.5rem;
+  font-weight: var(--fw-700);
+  margin-bottom: 2.5rem;
 }
 
-.plan-info {
-  margin-right: 2.4rem;
+aside {
+  background-color: var(--crl-very-pale-blue);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.6rem;
+  border-radius: 1rem;
+  margin-bottom: 2.4rem;
 }
 
-.plan-info p {
-  font-size: 1.5rem;
+.plan-content {
+  margin-inline: 1.9rem 5.2rem;
 }
 
-.attribution { 
-  font-size: var(--fs-footer);
-  text-align: center;
+.plan-title {
+  font-size: var(--fs-plan-m);
+  font-weight: var(--fw-900);
 }
 
-.attribution a { 
-  display: inline;
-  color: var(--clr-blue);
+.plan-price {
+  font-size: var(--fs-plan-m);
+  color: var(--crl-desaturared-blue);
+  font-weight: var(--fw-700);
+  line-height: 1.5;
+}
+
+.btn-change {
+  font-size: 1.3rem;
+  text-decoration: underline;
+  color: var(--clr-bright-blue);
+  font-weight: var(--fw-900);
+}
+.btn-change:hover,
+.btn-change:focus {
   text-decoration: none;
+  opacity: .75;
 }
 
+.main-button {
+  display: block;
+  background-color: var(--clr-bright-blue);
 
-@media (min-width: 720px) {
-  body {
-    background-image: url("images/pattern-background-desktop.svg");
-  }
+  font-size: var(--fs-body-m);
+  font-weight: var(--fw-900);
+  color: var(--clr-white);
+
+  padding: 1em 4.3em;
+  border-radius: 1rem;
+  transition: opacity 350ms ease-in-out;
+  box-shadow: 0px 1.7rem 1rem 0px hsla(224, 23%, 55%, 0.25);
+  margin-bottom: 2.4rem;
+
+}
+.main-button:hover,
+.main-button:focus {
+  opacity: .75;
+}
+
+.cancel-btn {
+  font-size: var(--fs-body-m);
+  font-weight: var(--fw-900);
+  color: var(--crl-desaturared-blue);
+  transition: color 150ms ease-in-out;
+}
+.cancel-btn:hover,
+.cancel-btn:focus {
+  color: var(--crl-dark-blue);
 }
